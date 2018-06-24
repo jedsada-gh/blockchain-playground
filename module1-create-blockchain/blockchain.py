@@ -72,11 +72,11 @@ def mine_block():
     previous_hash = blockchain.hash(previous_block)
     block = blockchain.create_block(proof, previous_hash)
     response = {
-        'message' : 'Congratulations, you just mined a block!',
-        'index' : block['index'],
-        'timestamp' : block['timestamp'],
-        'proof' : block['proof'],
-        'previous_hash' : block['previous_hash']
+        'message': 'Congratulations, you just mined a block!',
+        'index': block['index'],
+        'timestamp': block['timestamp'],
+        'proof': block['proof'],
+        'previous_hash': block['previous_hash']
     }
     return jsonify(response), 200
 
